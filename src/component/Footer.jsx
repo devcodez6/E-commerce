@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Pinterest, Twitter, WhatsApp } from "@material-ui/icons";
+import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter, WhatsApp } from "@material-ui/icons";
 import { styled } from "styled-components"
 
 const Container = styled.div`
@@ -62,6 +62,16 @@ flex: 1;
 padding: 20px;
 `;
 
+const ContactItem = styled.div`
+    margin-bottom: 20px;
+   display:flex;
+   align-items: center;
+`;
+
+const Payment = styled.img`
+   width: 50%;
+`;
+
 const Footer = () => {
   return (
     <Container>
@@ -106,7 +116,19 @@ const Footer = () => {
             
         </List>
     </Center>
-    <Right></Right>
+    <Right>
+        <Title>Contact</Title>
+        <ContactItem>
+            <Room style={{marginRight:"10px"}}/> 16, Cole Street,Iyana Ipaja, Lagos. Nigeria.
+            </ContactItem>
+        <ContactItem>
+            <Phone style={{marginRight:"10px"}}/> +234 816 126 2895 
+            </ContactItem>
+        <ContactItem>
+            <MailOutline style={{marginRight:"10px"}}/> oniyidetaiwo15@gmail.com
+            </ContactItem>
+    <Payment src="https://p.kindpng.com/picc/s/44-440249_paypal-payment-methods-icons-hd-png-download.png"/>
+    </Right>
     </Container>
   )
 }
