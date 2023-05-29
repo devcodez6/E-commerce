@@ -4,15 +4,20 @@ import Announcement from "../component/Announcement";
 import Newsletter from "../component/Newsletter";
 import Footer from "../component/Footer";
 import { Add, Remove } from "@material-ui/icons";
+import { mobile } from "../responsive";
 
 
 
 
 const Container = styled.div``;
+
+
 const Wrapper = styled.div`
 padding: 50px;
 display: flex;
+${mobile({padding: "10px",  flexDirection:"column"})};
 `;
+
 const ImgContainer = styled.div`
 flex: 1;
 `;
@@ -21,11 +26,13 @@ const Image = styled.img`
 width: 100%;
 height: 90vh;
 object-fit: cover;
+${mobile({ height:"50vh"})};
 `;
 
 const InfoContainer = styled.div`
 flex: 1;
 padding: 0px 50px;
+${mobile({ padding:"10px"})};
 `;
 
 const Title = styled.h1`
@@ -46,6 +53,7 @@ width: 50%;
 margin: 30px;
 display: flex;
 justify-content: space-between;
+${mobile({ width:"100%"})};
 `;
 
 
@@ -80,6 +88,7 @@ width: 50%;
 display: flex;
 align-items: center;
 justify-content: space-between;
+${mobile({width:"100%"})};
 `;
 
 const AmountContainer = styled.div`
